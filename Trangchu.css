@@ -1,0 +1,271 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Ngăn cuộn ngang */
+    overflow-y: hidden;
+}
+
+.classQuanLy {
+    display: grid;
+    grid-template-columns: 13% 87%; /* Menu chiếm 13%, nội dung 87% */
+    grid-template-rows: 5% 95%; 
+    height: 100vh; /* Toàn màn hình */
+    width: 100vw; 
+}
+
+.menu {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    background-color: rgb(17, 30, 108);
+    color: white;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.8s ease;
+    display: block;
+}
+.menu i{
+    visibility: hidden;
+    position: absolute;
+    right: 0px;
+    font-size: x-large;
+
+}
+
+.innermenu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.innermenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu-1 {
+    display: flex;
+    align-items: center;
+    margin: 7px 0;
+    padding: 20px;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-1:hover {
+    color: black;
+    background-color: rgba(192, 200, 248, 0.973);
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+}
+
+.logo div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo img {
+    max-width: 25%;
+    min-height: 25%;
+    border-radius: 50%;
+    border: solid 2px;
+    cursor: pointer;
+}
+.logo h4, .logo p {
+    margin: 0;
+    text-align: center;
+}
+
+
+.logo p {
+    margin: 0;
+}
+.out {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    background-color: rgb(17, 30, 108);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+}
+.out i{
+    font-size: large;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.out i:hover {
+    color: red;
+}
+
+.content {
+    grid-column: 2 / 3;
+    background-color: rgba(128, 128, 128, 0.093);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.list {
+    margin-top: 20px;
+    width: 100%;
+    height: auto; /* Auto-height for content */
+    background-color: white;
+    overflow: hidden;
+}
+
+.TieuDe {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ThongKe table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: hidden;
+}
+
+.ThongKe th, .ThongKe td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.ThongKe th {
+    background-color: #2a3d66;
+    color: white;
+    font-weight: bold;
+}
+
+.ThongKe tr:hover {
+    background-color: #f1f1f1;
+}
+
+.ThongKe tr i:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+td a {
+    color: black;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .menu{
+
+       display: none;
+        width: 50vw;
+        overflow: scroll;
+        
+    }
+
+    .classQuanLy {
+        grid-template-rows: 5% 95%; /* Reduce rows, keep content full width */
+        grid-template-columns: 100%; /* Content occupies the full width */
+        overflow-y: hidden;
+    }
+
+    .content {
+        grid-column: 1 / 3;
+    }
+
+    .ThongKe th, .ThongKe td {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .list {
+        margin-top: 10px;
+    }
+
+    .TieuDe h1{
+        font-size: small;
+    }
+    .menu i{
+        visibility: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        display: none; /* Hide menu on mobile devices */
+    }
+
+    .classQuanLy {
+        grid-template-rows: 5% 95%;
+        grid-template-columns: 100%;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .ThongKe th, .ThongKe td {
+        font-size: 10px; /* Reduce font size further for smaller screens */
+    }
+
+    .list {
+        margin-top: 5px;
+    }
+    .TieuDe h1{
+        font-size: x-small;
+    }
+}

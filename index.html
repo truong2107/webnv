@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="classQuanLy">
+        <!-- Menu -->
+        <div class="menu">
+                         <i class="fa-solid fa-bars"></i>
+            <div class="logo">
+                <div>
+                    <img src="./340090310_1374771333370992_3765660545192117681_n.jpg" alt="">
+                    <h4 style="white-space: unset;">Nguyễn Tấn Dũng</h4>
+                    <p style="height: 100%;">Chào mừng bạn trở lại</p>
+                </div>
+            </div>
+            <hr>
+            <div class="innermenu">
+                <ul>
+                    <li class="menu-1">Thống kê khách hàng</li>
+                    <li class="menu-1">Thống kê sản phẩm</li>
+                    <li class="menu-1">Sản phẩm</li>
+                    <li class="menu-1">Đơn hàng</li>
+                    <li class="menu-1">Tài khoản khách hàng</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Header -->
+        <div class="out">
+            <div class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+            </div>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <div class="list">
+                <!-- Nội dung chính -->
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+<script>
+const menu = document.querySelector('.menu');
+const menuToggle = document.querySelector('.menu-toggle i');
+menuToggle.addEventListener("click",function(){
+    if(menu instanceof HTMLElement){
+        menu.style.visibility="unset";
+        
+    }
+})
+const menuinput= document.querySelector(".menu i");
+menuinput.addEventListener("click",function(){
+    if(menu instanceof HTMLElement){
+
+        menu.style.visibility='hidden';
+        
+    }
+})
+
+
+</script>

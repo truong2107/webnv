@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Trangchu.css">
+</head>
+<body>
+
+    <div class="classQuanLy">
+        <div class="menu">
+          <i class="fa-solid fa-bars"></i>
+      <div class="logo" >
+<div>
+                    <img src="./340090310_1374771333370992_3765660545192117681_n.jpg" alt="">
+                    <h4 style="white-space: unset;">Nguyễn Tấn Dũng</h4>
+                    <p style="height: 100%;">Chào mừng bạn trở lại</p>
+</div>
+     </div>
+          <hr>
+     <div class="innermenu">
+              <ul>
+                <li class="menu-1" >Thống kê khách hàng</li>
+                <li class="menu-1">Thống kê sản phẩm</li>
+                <li class="menu-1">Sản phẩm</li>
+                <li class="menu-1">Đơn hàng</li>
+                <li class="menu-1">Tài khoản khách hàng</li>
+
+              </ul>
+</div>
+         </div>
+           <div class="out">
+            <div class="menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="out1">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </div>
+          </div>
+             <div class="content">
+              <div class="list">
+                <div class="TieuDe">
+                    <h1>Xếp hạng khách hàng trong tháng 9/2024(theo số tiền) </h1>
+                </div>
+                <div class="ThongKe">
+                    <table>
+<tr>
+                          <th >Stt</th>
+                          <TH >Tên khách hàng</TH>
+                          <th >Số lượng hàng</th>
+                          <th >Tổng số tiền</th>
+                          <th>Chi tiết</th>
+</tr>
+<tr>
+                          <td >1</td>
+                          <td >Nguyễn Văn A</td>
+                          <td >3</td>
+                          <td >299.000</td>
+<td>
+                            <div class="icon-container">
+                              <a href="ChiTietDonHang.html" target="_top"><i class="fa-solid fa-eye"></i></a>
+                              <div class="tooltip">Chi tiết đơn hàng</div>
+                            </div>
+</td>
+                          
+</tr>
+<tr>
+                        <td >2</td>
+                          <td >Nguyễn Văn A</td>
+                          <td >3</td>
+                          <td >200.000</td>
+                          <td>
+                            <div class="icon-container">
+                              <a href="ChiTietDonHang.html"><i class="fa-solid fa-eye"></i></a>
+                              <div class="tooltip">Chi tiết đơn hàng</div>
+                            </div>
+</td>
+</tr>
+<tr>
+                           <td >3</td>
+                          <td >Nguyễn Văn A</td>
+                          <td >3</td>
+                          <td >150.000</td>
+                          <td>
+                            <div class="icon-container">
+                              <a href="ChiTietDonHang.html"><i class="fa-solid fa-eye"></i></a>
+                              <div class="tooltip">Chi tiết đơn hàng</div>
+                            </div>
+</td>
+</tr>
+<tr>
+                           <td >4</td>
+                          <td >Nguyễn Văn A</td>
+                          <td >4</td>
+                          <td >150.000</td>
+                          <td>
+                            <div class="icon-container">
+                              <a href="ChiTietDonHang.html"><i class="fa-solid fa-eye"></i></a>
+                              <div class="tooltip">Chi tiết đơn hàng</div>
+                            </div>
+</td>
+</tr>
+<tr>
+                           <td >5</td>
+                          <td >Nguyễn Văn A</td>
+                          <td >4</td>
+                          <td >150.000</td>
+                          <td>
+                            <div class="icon-container">
+                              <a href="ChiTietDonHang.html"><i class="fa-solid fa-eye"></i></a>
+                              <div class="tooltip">Chi tiết đơn hàng</div>
+                            </div>
+</td>
+</tr>
+                    </table>
+                </div>
+              </div>
+             </div>
+           </div>
+           
+</body>
+</html>
+<script>
+  const menu = document.querySelector('.menu');
+  const menuToggle = document.querySelector('.menu-toggle i');
+  menuToggle.addEventListener("click",function(){
+      if(menu instanceof HTMLElement){
+          menu.style.display='block';
+          
+      }
+  })
+  const menuinput= document.querySelector(".menu i");
+  menuinput.addEventListener("click",function(){
+      if(menu instanceof HTMLElement){
+  
+          menu.style.display='none';
+          
+      }
+  })
+  
+  
+  </script>
